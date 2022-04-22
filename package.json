@@ -1,18 +1,17 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
   },
-
   "name": "projeto11-tweteroo",
   "version": "1.0.0",
   "type": "module",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node"
   },
   "keywords": [],
   "author": "",

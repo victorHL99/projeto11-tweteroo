@@ -10,7 +10,17 @@ const tweets = [];
 const users = [];
 
 
+app.post('/sign-up', (req, res) => {
+	const {username, avatar} = req.body;
+	users.unshift({username, avatar});
+	res.send("OK");
+})
 
+app.post('/tweets', (req, res) => {
+	const {username, tweet} = req.body;
+	tweets.unshift(tweet);
+	res.send("OK");
+})
 
 //Get recebendo tweets
 app.get('/tweets', (req, res) => {

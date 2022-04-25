@@ -17,7 +17,7 @@ app.post('/sign-up', (req, res) => {
 		"avatar": avatar
 	}
 	
-	users.push(usuario);
+	users.unshift(usuario);
 	res.send("OK");
 })
 
@@ -32,7 +32,7 @@ app.post('/tweets', (req, res) => {
 		"tweet": tweet
 	}
 
-	tweets.push(tweetObj);
+	tweets.unshift(tweetObj);
 	res.send("OK");
 })
 
@@ -62,7 +62,7 @@ function pegarTweets() {
     function lastTweets(i) {
         const user = users.filter(element => element.username === tweets[i].username);
 
-        ultimos10.push(
+        ultimos10.unshift(
             {
                 "username": tweets[i].username,
                 "avatar": user[0].avatar,
